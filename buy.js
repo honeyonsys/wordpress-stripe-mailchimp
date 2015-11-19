@@ -94,7 +94,15 @@ function stripeResponseHandler(status, response) {
 
 	  // Submit the form:
 	  f.get(0).submit();
-	  alert('payment_successful');
+	  $.ajax({
+	  	method:'POST', 
+	  	url : '../examples/mcapi_listSubscribe.php', 
+	  	data : {'email' : $('.e-mail').val() },
+	  	success: function(data){alert(data); },
+	  	error: function(){ alert('can not send'); } 
+
+
+	  });
 
 	}
 
