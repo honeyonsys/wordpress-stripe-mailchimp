@@ -7,7 +7,7 @@
 
 // This function is just used to display error messages on the page.
 // Assumes there's an element with an ID of "payment-errors".
-function reportError(msg) {
+function reportError(msg) { 
 	// Show the error in the form:
 	$('#payment-errors').text(msg).addClass('alert alert-error');
 	// re-enable the submit button:
